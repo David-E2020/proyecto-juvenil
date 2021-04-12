@@ -62,7 +62,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (1,'1','El arrierito 2021','414785555'),(2,'1','el arriero','74485241'),(7,'1','Entel Bolivia SA.','74582475'),(8,'1','Tigo SA','74585248585'),(9,'1','Viva Bolivia SA','145558968'),(10,'1','Cotel tv SA','455845885'),(11,'1','Criss SRL','414527528'),(12,'1','Huawei SA','45521854'),(13,'1','Huawei LTDA.','151515'),(14,'0','Motorola','41524785'),(15,'1','Ipple','45247854'),(16,'1','Cafe alexander SA','85441255'),(17,'1','Ingala SA','4145255225'),(18,'1','Bolivia-Mar Sa','71777177');
+INSERT INTO `cliente` VALUES (1,'1','El arrierito 2021','414785555'),(2,'1','el arriero','74485241'),(7,'0','Entel Bolivia SA.','74582475'),(8,'1','Tigo Bolivia SA','9999999999'),(9,'1','Viva Bolivia SA','145558968'),(10,'1','Cotel tv SA','455845885'),(11,'1','Criss SRL','414527528'),(12,'0','Huawei SA','45521854'),(13,'1','Huawei LTDA.','151515'),(14,'1','Motorola','41524785'),(15,'1','Ipple','45247854'),(16,'1','Cafe alexander SA','85441255'),(17,'1','Ingala SA','4145255225'),(18,'1','Bolivia-Mar Sa','71777177');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -235,7 +235,7 @@ CREATE TABLE `proveedor` (
   `estado` char(2) NOT NULL DEFAULT '1',
   `logo` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_proveedor`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -244,7 +244,7 @@ CREATE TABLE `proveedor` (
 
 LOCK TABLES `proveedor` WRITE;
 /*!40000 ALTER TABLE `proveedor` DISABLE KEYS */;
-INSERT INTO `proveedor` VALUES (7,'deep web','Juan carlos','dee.web@gmail.onion','7415244','no definido','1','deep-web.png'),(8,'lg SA','Monica Casas Conde','monica@gmail.com','74158444','los pinos N° 555','1','ideas.png'),(9,'constructora Ideas','dacas','asd@gmail.com','555555','cala coto N°110','1','espiritu emprendedor.png');
+INSERT INTO `proveedor` VALUES (7,'deep web','Juan carlos','dee.web@gmail.onion','7415244','no definido','1','deep-web.png'),(8,'lg SA','Monica Casas Conde','monica@gmail.com','74158444','los pinos N° 555','1','abh.png'),(9,'constructora Ideas','Drean Mars','asd@gmail.com','555555','cala coto N°110','1','city.png'),(10,'apple','steve jobs','steve.jobs@gmail.com','59175545852','EEUU. miami','1','apple.png'),(11,'amazon','Jhimmy steeb','Jhimmy.steeb@gmai.com','59147447744','amazon bolivia','1','amazon.png'),(12,'adidas','tim yen','tim.yen@gmail.com','598852565','EEUU. malibu','1','Logo-Adidas.png');
 /*!40000 ALTER TABLE `proveedor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -315,4 +315,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-11 23:36:44
+-- Dump completed on 2021-04-12 14:34:40

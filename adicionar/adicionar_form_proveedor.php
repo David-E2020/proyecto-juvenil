@@ -16,7 +16,7 @@ VALUES ('$empresa','$contacto','$mail','$telefono','$direccion','$a')";
 
 $res=mysqli_query($conexion,$consulta);
 if($res){
-    @copy($b,"imagenes_proveedor/".$a);
+    @copy($b,"../imagenes_proveedor/".$a);
     echo "<cript>
         alert('se registro correctamente')
         </script>";

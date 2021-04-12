@@ -16,8 +16,6 @@ if($a==""){
     $consulta="UPDATE proveedor SET empresa='$empresa',contacto='$contacto',mail='$mail',telefono='$telefono',direccion='$direccion',logo='$a' WHERE id_proveedor='$id'";
 }
 
-//$consulta="UPDATE proveedor SET empresa='$empresa',contacto='$contacto',mail='$mail',telefono='$telefono',direccion='$direccion',logo='$a' WHERE id_proveedor='$id'";
-
 $res=mysqli_query($conexion,$consulta);
 if($res && $a!=""){
     @unlink("../imagenes_proveedor/"."$logo");
