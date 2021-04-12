@@ -59,11 +59,11 @@ include('../cuerpo/encabezado.php');
                                 <td><?= $direccion ?></td>
                                 <td><?= $estado ?></td>
 
-                                <?php echo '<td><img width="60" src="../imagenes_proveedor/' . $dato['logo'] . '"></td>'; ?>
+                                <?php echo '<td><img width="60" src="../imagenes_proveedor/' . $logo . '"></td>'; ?>
                                 <td>
                                     <div class="btn-group">
                                         <?php include('../eliminar/modal_eliminar.php');$accion; ?>
-                                        <?php include('../eliminar/modal_editar.php'); ?>
+                                        <?php include('../modal_editar/modal_editar_proveedor.php');?>
                                     </div>
                                 </td>
                             </tr>

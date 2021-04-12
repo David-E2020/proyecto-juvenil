@@ -48,7 +48,7 @@ include('../cuerpo/encabezado.php');
                                 <td>
                                     <div class="btn-group">
                                         <?php include('../eliminar/modal_eliminar.php');$accion; ?>
-                                        <?php include('../eliminar/modal_editar.php'); ?>
+                                        <?php include('../modal_editar/modal_editar_cargo.php');?>
                                     </div>
                                 </td>
                             </tr>

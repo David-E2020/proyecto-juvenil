@@ -31,7 +31,7 @@ include('../cuerpo/encabezado.php');
                             $id=$dato['id_producto'];
                             $id_proveedor=$dato['id_proveedor'];
                             $nombre=$dato['nombreproducto'];
-                            $descripciom=$dato['descripcion'];
+                            $descripcion=$dato['descripcion'];
                             $costocompra=$dato['costocompra'];
                             $costoventa=$dato['costoventa'];
                             $stock=$dato['stock'];
@@ -46,12 +46,12 @@ include('../cuerpo/encabezado.php');
                             $result=mysqli_fetch_array(mysqli_query($conexion,"SELECT * FROM proveedor WHERE id_proveedor=$id_proveedor"));
                             ?>
                             <tr>
-                                <td><?=$id?></td><td><?=$result['empresa']?></td><td><?=$nombre?></td><td><?=$descripciom?></td>
+                                <td><?=$id?></td><td><?=$result['empresa']?></td><td><?=$nombre?></td><td><?=$descripcion?></td>
                                 <td><?=$costocompra?></td><td><?=$costoventa?></td><td><?=$stock?></td><td><?=$fecha?></td><td><?=$estado?></td>
                                 <td>
                                 <div class="btn-group">
                                     <?php include('../eliminar/modal_eliminar.php');$accion; ?>
-                                    <?php include('../eliminar/modal_editar.php'); ?>
+                                    <?php include('../modal_editar/modal_editar_producto.php'); ?>
                                 </div>
                                 </td>
                             </tr>

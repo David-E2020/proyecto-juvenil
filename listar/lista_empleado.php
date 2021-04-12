@@ -26,8 +26,7 @@ include('../cuerpo/encabezado.php');
                     <tbody>
                         
                         <?php 
-                        $consulta = "SELECT * FROM empleado WHERE estado=1";
-                        $resultado = mysqli_query($conexion,$consulta);
+                        $resultado = mysqli_query($conexion,"SELECT * FROM empleado WHERE estado=1");
                         $accion="../eliminar/eliminar_empleado.php";
                         while($dato = mysqli_fetch_array($resultado)){
                             $id=$dato['id_empleado'];
@@ -60,7 +59,7 @@ include('../cuerpo/encabezado.php');
                                 <td>
                                 <div class="btn-group">
                                     <?php include('../eliminar/modal_eliminar.php');$accion;?>
-                                    <?php include('../eliminar/modal_editar.php');?>
+                                    <?php include('../modal_editar/modal_editar_empleado.php');?>
                                 </div>
                                 </td>
                             </tr>
