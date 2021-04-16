@@ -2,6 +2,7 @@
 <?php
 include('../bd/coneccion.php');
 include('../cuerpo/encabezado.php');
+//David Elias Mamani Laura
 ?>
 <div class="main-content container-fluid">
     <div class="page-title">

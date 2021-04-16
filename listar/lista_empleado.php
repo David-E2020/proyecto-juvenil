@@ -1,5 +1,6 @@
 
 <?php
+//David Elias Mamani Laura
 include('../bd/coneccion.php');
 include('../cuerpo/encabezado.php');
 ?>

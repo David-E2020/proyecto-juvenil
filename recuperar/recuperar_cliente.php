@@ -1,4 +1,5 @@
 <?php
+//David Elias Mamani Laura
 include('../bd/coneccion.php');
 $cantidad=$_GET['id'];
 $resultadobb = mysqli_query($conexion, "SELECT * FROM cliente WHERE estado=0");

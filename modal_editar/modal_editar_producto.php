@@ -6,7 +6,7 @@
         <i class="fas fa-user-edit"></i>
     </a>
 
-    <!--login form Modal -->
+    <!--login form Modal //David Elias Mamani Laura-->
     <div class="modal fade text-left modal-borderless" id="inlineForm<?php echo $id; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
             <div class="modal-content">

@@ -5,7 +5,7 @@
         reestablecer clientes
     </button>
 
-    <!--Extra Large Modal -->
+    <!--Extra Large Modal //David Elias Mamani Laura-->
     <div class="modal modal-borderless fade text-left w-100" id="xlarge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel16" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl" role="document">
             <div class="modal-content">

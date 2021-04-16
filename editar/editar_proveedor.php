@@ -1,4 +1,5 @@
 <?php 
+//David Elias Mamani Laura
 include('../bd/coneccion.php');
 $id=$_GET['id'];
 $empresa=$_POST['empresa'];
