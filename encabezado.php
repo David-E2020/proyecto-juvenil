@@ -56,109 +56,34 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class='sidebar-title'>Estras</li>
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i data-feather="file-text" width="20"></i>
-                                <span>Becas</span>
-                            </a>
-                            <ul class="submenu ">
-                                <li>
-                                    <a href="#l">Postulantes</a>
-                                </li>
-                                <li>
-                                    <a href="#l">Estudiantes becados</a>
-                                </li>
-                                <li>
-                                    <a href="#">Requisitos becas</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="sidebar-item  ">
-                            <a href="form-layout.html" class='sidebar-link'>
-                                <i data-feather="layout" width="20"></i>
-                                <span>Torneos</span>
-                            </a>
-                            <ul class="submenu ">
-
-                                <li>
-                                    <a href="#">Torneos realizados</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">Lista de todos los torneos</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">Torneos pendientes</a>
-                                </li>
-
-                            </ul>
-                        </li>
-
-
-
-
-                        <li class="sidebar-item  ">
-                            <a href="form-editor.html" class='sidebar-link'>
-                                <i data-feather="layers" width="20"></i>
-                                <span>Administrativo</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li>
-                                    <a href="#">Lista Personal</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">Agregar personal</a>
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-
-
-
-                        <li class='sidebar-title'>Usuarios</li>
-
-
-
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i data-feather="user" width="20"></i>
-                                <span>Login</span>
+                                <span>Autenticación</span>
                             </a>
 
                             <ul class="submenu ">
 
                                 <li>
-                                    <a href="#">Administrador</a>
+                                    <a href="/autenticacion/lista_usuarios.php">Listar usuario</a>
                                 </li>
 
                                 <li>
-                                    <a href="#">Instructores</a>
+                                    <a href="/autenticacion/registrar_usuario.php">Registrar usuario</a>
                                 </li>
 
                                 <li>
-                                    <a href="#">Estudiantes</a>
+                                    <a href="auth-forgot-password.html">Has olvidado tu contraseña</a>
                                 </li>
 
                             </ul>
 
                         </li>
-
-
-
 
                         <li class="sidebar-item  has-sub">
                             <a href="#" class='sidebar-link'>
                                 <i data-feather="alert-circle" width="20"></i>
-                                <span>Errors</span>
+                                <span>Errores</span>
                             </a>
 
                             <ul class="submenu ">
@@ -176,9 +101,6 @@
                                 </li>
 
                             </ul>
-
-                        </li>
-
 
 
 
