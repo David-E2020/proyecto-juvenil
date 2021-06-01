@@ -1,0 +1,10 @@
+<?php
+include("seguridad.php");
+if($_SESSION['nivel']==1){
+    header('location:cuerpo/principal.php');
+}else{
+    if($_SESSION['nivel']==2){
+        header("location:cuerpo/principal2.php");
+    }
+}
+?>
