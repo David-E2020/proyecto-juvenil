@@ -1,6 +1,17 @@
 <?php
 include('../bd/coneccion.php');
-include('../cuerpo/encabezado.php');
+
+
+include("../seguridad.php");
+if($_SESSION['nivel']==1){
+    include('../cuerpo/encabezado.php');
+}else{
+    if($_SESSION['nivel']==2){
+        include('../cuerpo/encabezado2.php');
+    }
+}
+?>
+
 ?>
 <div class="main-content container-fluid">
     <div class="page-title">

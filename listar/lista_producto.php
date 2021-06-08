@@ -1,8 +1,19 @@
 
 <?php
 include('../bd/coneccion.php');
-include('../cuerpo/encabezado.php');
+
 //David Elias Mamani Laura
+
+include("../seguridad.php");
+if($_SESSION['nivel']==1){
+    include('../cuerpo/encabezado.php');
+}else{
+    if($_SESSION['nivel']==2){
+        include('../cuerpo/encabezado2.php');
+    }
+}
+?>
+
 ?>
 <div class="main-content container-fluid">
     <div class="page-title">
@@ -14,6 +25,7 @@ include('../cuerpo/encabezado.php');
         <div class="card">
             <div class="card-header">
                 <h3>Lista de productos</h3>
+                <a href="../reportes/reporte_producto.php" class="btn btn-primary">Reporte</a>
             </div>
             <div class="card-body">
                 <table class='table table-striped' id="table1">

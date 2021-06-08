@@ -29,6 +29,4 @@ if(strcmp($contraseña1,$contraseña2)==0){
         header("Location: lista_usuarios.php");
     }
 }
-
-
 ?>

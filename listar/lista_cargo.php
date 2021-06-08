@@ -1,7 +1,7 @@
 <?php
 include('../bd/coneccion.php');
 
-include("seguridad.php");
+include("../seguridad.php");
 if($_SESSION['nivel']==1){
     include('../cuerpo/encabezado.php');
 }else{

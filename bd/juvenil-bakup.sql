@@ -27,7 +27,7 @@ CREATE TABLE `cargo` (
   `cargo` varchar(50) DEFAULT NULL,
   `estado` char(2) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id_cargo`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `cargo` (
 
 LOCK TABLES `cargo` WRITE;
 /*!40000 ALTER TABLE `cargo` DISABLE KEYS */;
-INSERT INTO `cargo` VALUES (1,'admin','1'),(2,'gestión social','1'),(3,'gestion social departamental','1'),(4,'Directora de recursos humanos','1'),(5,'director depto informática','1'),(6,'Sub director de depto informática','1'),(7,'asd','1'),(8,'administrativo 3','1'),(9,'administrativo 4','1');
+INSERT INTO `cargo` VALUES (1,'admin','1'),(2,'gestión social','1'),(3,'gestion social departamental','1'),(4,'Directora de recursos humanos','1'),(5,'director depto informática','1'),(6,'Sub director de depto informática','1'),(7,'asd','1'),(8,'administrativo 3','1'),(9,'administrativo 5','1');
 /*!40000 ALTER TABLE `cargo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -172,7 +172,7 @@ CREATE TABLE `empleado` (
   PRIMARY KEY (`id_empleado`),
   KEY `fk_empleado_cargo1_idx` (`id_cargo`),
   CONSTRAINT `fk_empleado_cargo1` FOREIGN KEY (`id_cargo`) REFERENCES `cargo` (`id_cargo`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,7 +181,7 @@ CREATE TABLE `empleado` (
 
 LOCK TABLES `empleado` WRITE;
 /*!40000 ALTER TABLE `empleado` DISABLE KEYS */;
-INSERT INTO `empleado` VALUES (2,2,'74118854 lp','Guillermina','Quiroga','Ortiz','achumani -  las lomas nro. 454','741852454','1990-04-18','F','ayudar a quien mas lo necita','1'),(3,2,'74118854 lp','David','Vera','Mendez','calacoto','741454','2021-03-03','M','','1'),(4,3,'44585','Jose','Illanes','Illanes','los pinos','44444','2020-06-18','M','interes en telecomunicaciones','1'),(5,8,'418524','Damian','Vera','Lopez','chumani N°5555','55555','1992-04-17','M','deportes musica','1'),(6,6,'41452','Juan Torrez','Casas','Venavides','Obrajes 555','87411555','2000-01-29','M','Futbool','1');
+INSERT INTO `empleado` VALUES (2,2,'74118854','Guillermina','Quiroga','Ortiz','achumani -  las lomas nro. 454','741852454','1990-04-18','F','ayudar a quien mas lo necita','1'),(3,2,'74118854','David','Vera','Mendez','calacoto','741454','2021-03-03','M','','1'),(4,3,'44585','Jose','Illanes','Illanes','los pinos','44444','2020-06-18','M','interes en telecomunicaciones','1'),(5,8,'418524','Damian','Vera','Lopez','chumani N°5555','55555','1992-04-17','M','deportes musica','1'),(6,6,'41452','Juan Torrez','Casas','Venavides','Obrajes 555','87411555','2000-01-29','M','Futbool','1'),(7,9,'888888','David Elias','Mamani','Laura','obrajes 1000','74747474','1996-04-18','M','deportes','1');
 /*!40000 ALTER TABLE `empleado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -256,16 +256,16 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
-  `id_usuario` int unsigned NOT NULL AUTO_INCREMENT,
-  `empleado_id_empleado` int unsigned NOT NULL,
+  `ci` int unsigned NOT NULL AUTO_INCREMENT,
+  `id_empleado` int unsigned NOT NULL,
   `usuario` varchar(35) DEFAULT NULL,
-  `password` varchar(65) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
   `nivel` int DEFAULT NULL,
-  `estado` varchar(25) DEFAULT NULL,
-  PRIMARY KEY (`id_usuario`),
-  KEY `fk_usuarios_empleado1_idx` (`empleado_id_empleado`),
-  CONSTRAINT `fk_usuarios_empleado1` FOREIGN KEY (`empleado_id_empleado`) REFERENCES `empleado` (`id_empleado`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `estado` char(2) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`ci`),
+  KEY `fk_usuarios_empleado1_idx` (`id_empleado`),
+  CONSTRAINT `fk_usuarios_empleado1` FOREIGN KEY (`id_empleado`) REFERENCES `empleado` (`id_empleado`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=444444445 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -274,6 +274,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
+INSERT INTO `usuarios` VALUES (41452,6,'juana B','f1c1592588411002af340cbaedd6fc33',1,'1'),(418524,5,'david','81dc9bdb52d04dc20036dbd8313ed055',1,'1'),(888888,7,'David-E2020','dbc4d84bfcfe2284ba11beffb853a8c4',1,'1'),(74118854,2,'guichi','e10adc3949ba59abbe56e057f20f883e',2,'1');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -315,4 +316,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-01 18:36:17
+-- Dump completed on 2021-06-01 17:08:58

@@ -1,6 +1,15 @@
 <?php
 include('../bd/coneccion.php');
-include('../cuerpo/encabezado.php');
+
+include("../seguridad.php");
+if($_SESSION['nivel']==1){
+    include('../cuerpo/encabezado.php');
+}else{
+    if($_SESSION['nivel']==2){
+        include('../cuerpo/encabezado2.php');
+    }
+}
+?>
 
 ?>
 <div class="main-content container-fluid">
@@ -13,6 +22,7 @@ include('../cuerpo/encabezado.php');
         <div class="card">
             <div class="card-header">
                 <h3>Lista de clientes</h3>
+                <a href="../reportes/reporte_cliente.php" class="btn btn-primary">Reporte</a>
             </div>
             <div class="card-body">
 
