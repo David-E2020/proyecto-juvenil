@@ -86,29 +86,7 @@
 
 
 
-                        <li class="sidebar-item  has-sub">
-                            <a href="#" class='sidebar-link'>
-                                <i data-feather="alert-circle" width="20"></i>
-                                <span>Errors</span>
-                            </a>
-
-                            <ul class="submenu ">
-
-                                <li>
-                                    <a href="error-403.html">403</a>
-                                </li>
-
-                                <li>
-                                    <a href="error-404.html">404</a>
-                                </li>
-
-                                <li>
-                                    <a href="error-500.html">500</a>
-                                </li>
-
-                            </ul>
-
-                        </li>
+                        
 
 
 

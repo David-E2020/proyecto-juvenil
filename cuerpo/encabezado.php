@@ -56,6 +56,21 @@
                                 </li>
                             </ul>
                         </li>
+
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i data-feather="triangle" width="20"></i>
+                                <span>Venta</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li>
+                                    <a href="../ventas/registroventa.php">Nueva venta</a>
+                                </li>
+                                <li>
+                                    <a href="../ventas/listaventa.php">Listar ventas</a>
+                                </li>
+                            </ul>
+                        </li>
                         
 
 

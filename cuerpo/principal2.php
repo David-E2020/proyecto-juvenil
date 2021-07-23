@@ -2,7 +2,15 @@
 <?php
 //include('bd/coneccion.php');
 //include_once('bd/coneccion.php');
-include('encabezado2.php');
+//include('encabezado2.php');
+include("../seguridad.php");
+if($_SESSION['nivel']==1){
+    include('encabezado.php');
+}else{
+    if($_SESSION['nivel']==2){
+        include('encabezado2.php');
+    }
+}
 ?>
 <div class="main-content container-fluid">
     <div class="page-title">

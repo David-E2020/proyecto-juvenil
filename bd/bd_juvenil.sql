@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.23, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.25, for Win64 (x86_64)
 --
 -- Host: localhost    Database: juvenil
 -- ------------------------------------------------------
--- Server version	8.0.23
+-- Server version	8.0.25
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -62,7 +62,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (1,'1','El arrierito 2021','414785555'),(2,'1','el arriero','74485241'),(7,'1','Entel Bolivia SA.','74582475'),(8,'1','Tigo SA','88888888'),(9,'1','Viva Bolivia SA','145558968'),(10,'1','Cotel tv SA','455845885'),(11,'1','Criss SRL','414527528'),(12,'1','Huawei SA','45521854'),(13,'1','Huawei LTDA.','151515'),(14,'1','Motorola','41524785'),(15,'1','Ipple','45247854'),(16,'1','Cafe alexander SA','85441255'),(17,'1','Ingala SA','4145255225'),(18,'1','Bolivia-Mar Sa','71777177');
+INSERT INTO `cliente` VALUES (1,'1','El arrierito 2021','414785555'),(2,'1','el arriero','74485241'),(7,'1','Entel Bolivia SA.','74582475'),(8,'1','Tigo SA','88888888'),(9,'1','Viva Bolivia SA','145558968'),(10,'1','Cotel tv SA','455845885'),(11,'0','Criss SRL','414527528'),(12,'1','Huawei SA','45521854'),(13,'1','Huawei LTDA.','151515'),(14,'1','Motorola','41524785'),(15,'1','Ipple','45247854'),(16,'1','Cafe alexander SA','85441255'),(17,'1','Ingala SA','4145255225'),(18,'1','Bolivia-Mar Sa','71777177');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -77,6 +77,7 @@ CREATE TABLE `compra` (
   `id_compra` int unsigned NOT NULL AUTO_INCREMENT,
   `id_empleado` int unsigned NOT NULL,
   `fecha` date DEFAULT NULL,
+  `id_proveedor` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_compra`),
   KEY `fk_compra_empleado1_idx` (`id_empleado`),
   CONSTRAINT `fk_compra_empleado1` FOREIGN KEY (`id_empleado`) REFERENCES `empleado` (`id_empleado`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -146,6 +147,7 @@ CREATE TABLE `detalle_venta` (
 
 LOCK TABLES `detalle_venta` WRITE;
 /*!40000 ALTER TABLE `detalle_venta` DISABLE KEYS */;
+INSERT INTO `detalle_venta` VALUES (1,3,1,65.00);
 /*!40000 ALTER TABLE `detalle_venta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -214,7 +216,7 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES (3,7,'poleras','poleras talla M',50.00,65.00,20,'2021-03-25','1'),(4,11,'televisores AAAA','televisores ARPA',1200.00,1400.00,4,'2021-03-20','1'),(5,9,'celulares','huawei p30 plus',4500.00,4900.00,20,'2020-01-20','1');
+INSERT INTO `producto` VALUES (3,7,'poleras','poleras talla M',50.00,65.00,4,'2021-03-25','1'),(4,11,'televisores','televisores ARPA',1200.00,1400.00,0,'2021-03-20','1'),(5,9,'celulares','huawei p30 plus',4500.00,4900.00,2,'2020-01-20','1');
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -274,7 +276,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (41452,6,'juana B','f1c1592588411002af340cbaedd6fc33',1,'1'),(418524,5,'david','81dc9bdb52d04dc20036dbd8313ed055',1,'1'),(888888,7,'David-E2020','dbc4d84bfcfe2284ba11beffb853a8c4',1,'1'),(74118854,2,'guichi','e10adc3949ba59abbe56e057f20f883e',2,'1');
+INSERT INTO `usuarios` VALUES (41452,6,'juana B','f1c1592588411002af340cbaedd6fc33',1,'1'),(418524,5,'david','202cb962ac59075b964b07152d234b70',1,'1'),(888888,7,'David-E2020','dbc4d84bfcfe2284ba11beffb853a8c4',1,'1'),(74118854,2,'guichi','202cb962ac59075b964b07152d234b70',2,'1');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -295,7 +297,7 @@ CREATE TABLE `venta` (
   KEY `fk_venta_cliente1_idx` (`id_cliente`),
   CONSTRAINT `fk_venta_cliente1` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_venta_empleado1` FOREIGN KEY (`id_empleado`) REFERENCES `empleado` (`id_empleado`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -304,6 +306,7 @@ CREATE TABLE `venta` (
 
 LOCK TABLES `venta` WRITE;
 /*!40000 ALTER TABLE `venta` DISABLE KEYS */;
+INSERT INTO `venta` VALUES (1,2,1,'1990-04-18');
 /*!40000 ALTER TABLE `venta` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -316,4 +319,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-01 17:08:58
+-- Dump completed on 2021-06-24  0:46:29
